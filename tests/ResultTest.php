@@ -6,7 +6,6 @@ namespace webignition\SfsResultModels\Tests;
 
 use PHPUnit\Framework\TestCase;
 use webignition\SfsResultInterfaces\ResultInterface;
-use webignition\SfsResultModels\InvalidTypeException;
 use webignition\SfsResultModels\Result;
 
 class ResultTest extends TestCase
@@ -130,19 +129,5 @@ class ResultTest extends TestCase
                 'asn' => null,
             ],
         ];
-    }
-
-    public function testCreateInvalidType()
-    {
-        $this->expectException(InvalidTypeException::class);
-        $this->expectExceptionMessage('Invalid type "foo"');
-
-        new Result(
-            '127.0.0.1',
-            'foo',
-            0,
-            false,
-            false
-        );
     }
 }

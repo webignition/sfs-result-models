@@ -6,13 +6,6 @@ use webignition\SfsResultInterfaces\ResultInterface;
 
 class Result implements ResultInterface
 {
-    const VALID_TYPES = [
-        ResultInterface::TYPE_EMAIL,
-        ResultInterface::TYPE_EMAIL_HASH,
-        ResultInterface::TYPE_IP,
-        ResultInterface::TYPE_USERNAME,
-    ];
-
     private $value;
     private $type;
     private $frequency;
@@ -35,8 +28,6 @@ class Result implements ResultInterface
      * @param string|null $delegatedCountryCode
      * @param string|null $countryCode
      * @param int|null $asn
-     *
-     * @throws InvalidTypeException
      */
     public function __construct(
         string $value,
@@ -50,10 +41,6 @@ class Result implements ResultInterface
         ?string $countryCode = null,
         ?int $asn = null
     ) {
-        if (!in_array($type, self::VALID_TYPES)) {
-            throw new InvalidTypeException($type);
-        }
-
         $this->value = $value;
         $this->type = $type;
         $this->frequency = $frequency;
