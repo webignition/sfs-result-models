@@ -1,7 +1,7 @@
 {
     "name": "webignition/sfs-result-models",
-    "description": "PHP models for results from querying api.stopforumspam.org",
-    "keywords": ["stopforumspam.org", "spam", "forum"],
+    "description": "PHP models for results from querying api.stopforumspam.com",
+    "keywords": ["stopforumspam.com", "spam", "forum"],
     "homepage": "https://github.com/webignition/sfs-result-models",
     "type": "library",
     "license": "MIT",
