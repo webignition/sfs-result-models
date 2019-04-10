@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85b1f12e4b2708b7d5ef1fd7f1ea0cf9",
+    "content-hash": "02cbfac645cf19b00a3d19a2d8e7cce9",
     "packages": [
         {
             "name": "webignition/sfs-result-interfaces",
-            "version": "0.2",
+            "version": "0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webignition/sfs-result-interfaces.git",
-                "reference": "181a4c06b4dc83cec4d105f0221b50f31343b571"
+                "reference": "63aee78a101368202d4c45eb7df6a13a6219a54a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webignition/sfs-result-interfaces/zipball/181a4c06b4dc83cec4d105f0221b50f31343b571",
-                "reference": "181a4c06b4dc83cec4d105f0221b50f31343b571",
+                "url": "https://api.github.com/repos/webignition/sfs-result-interfaces/zipball/63aee78a101368202d4c45eb7df6a13a6219a54a",
+                "reference": "63aee78a101368202d4c45eb7df6a13a6219a54a",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "spam",
                 "stopforumspam.org"
             ],
-            "time": "2019-04-10T11:32:34+00:00"
+            "time": "2019-04-10T13:49:22+00:00"
         }
     ],
     "packages-dev": [
