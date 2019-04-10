@@ -1,0 +1,44 @@
+{
+    "name": "webignition/sfs-result-models",
+    "description": "PHP models for results from querying api.stopforumspam.org",
+    "keywords": ["stopforumspam.org", "spam", "forum"],
+    "homepage": "https://github.com/webignition/sfs-result-models",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jon Cram",
+            "email": "webignition@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "webignition\\SfsResultModels\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "webignition\\SfsResultModels\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "cs": "./vendor/bin/phpcs src tests --colors --standard=PSR2",
+        "static-analysis": "./vendor/bin/phpstan analyse src tests --level=7",
+        "test": "./vendor/bin/phpunit --colors=always",
+        "ci": [
+            "@composer cs",
+            "@composer static-analysis",
+            "@composer test"
+        ]
+    },
+    "require": {
+        "php": ">=7.2.0",
+        "webignition/sfs-result-interfaces": ">=0.2,<1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3",
+        "phpunit/phpunit": "^8.1",
+        "phpstan/phpstan": "^0.11.5"
+    },
+    "minimum-stability":"stable"
+}
