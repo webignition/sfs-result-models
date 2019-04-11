@@ -16,6 +16,7 @@ class Result implements ResultInterface
     private $countryCode;
     private $asn;
     private $isBlacklisted;
+    private $isTorExitNode;
 
     /**
      * @param string $value
@@ -28,6 +29,7 @@ class Result implements ResultInterface
      * @param string|null $delegatedCountryCode
      * @param string|null $countryCode
      * @param int|null $asn
+     * @param bool|null $isTorExitNode
      */
     public function __construct(
         string $value,
@@ -39,7 +41,8 @@ class Result implements ResultInterface
         ?float $confidence = null,
         ?string $delegatedCountryCode = null,
         ?string $countryCode = null,
-        ?int $asn = null
+        ?int $asn = null,
+        ?bool $isTorExitNode = false
     ) {
         $this->value = $value;
         $this->type = $type;
@@ -51,6 +54,7 @@ class Result implements ResultInterface
         $this->delegatedCountryCode = $delegatedCountryCode;
         $this->countryCode = $countryCode;
         $this->asn = $asn;
+        $this->isTorExitNode = $isTorExitNode;
     }
 
     public function getType(): string
@@ -113,5 +117,14 @@ class Result implements ResultInterface
     public function isBlacklisted(): bool
     {
         return $this->isBlacklisted;
+    }
+
+    public function isTorExitNode(): bool
+    {
+        if ($this->type !== ResultInterface::TYPE_IP) {
+            return false;
+        }
+
+        return $this->isTorExitNode;
     }
 }

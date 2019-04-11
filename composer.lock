@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88a2de7ea81180a6673a993d7996c9ad",
+    "content-hash": "ffdc8038f6c3d319bd3bf0b40542fadd",
     "packages": [
         {
             "name": "webignition/sfs-result-interfaces",
-            "version": "0.4",
+            "version": "0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webignition/sfs-result-interfaces.git",
-                "reference": "63aee78a101368202d4c45eb7df6a13a6219a54a"
+                "reference": "9f8fddc70a9af1c2d307609a1d876d5fa2162d73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webignition/sfs-result-interfaces/zipball/63aee78a101368202d4c45eb7df6a13a6219a54a",
-                "reference": "63aee78a101368202d4c45eb7df6a13a6219a54a",
+                "url": "https://api.github.com/repos/webignition/sfs-result-interfaces/zipball/9f8fddc70a9af1c2d307609a1d876d5fa2162d73",
+                "reference": "9f8fddc70a9af1c2d307609a1d876d5fa2162d73",
                 "shasum": ""
             },
             "require": {
@@ -42,14 +42,14 @@
                     "email": "webignition@gmail.com"
                 }
             ],
-            "description": "PHP interfaces for models for results from querying api.stopforumspam.org",
+            "description": "PHP interfaces for models for results from querying api.stopforumspam.com",
             "homepage": "https://github.com/webignition/sfs-result-interfaces",
             "keywords": [
                 "forum",
                 "spam",
-                "stopforumspam.org"
+                "stopforumspam.com"
             ],
-            "time": "2019-04-10T13:49:22+00:00"
+            "time": "2019-04-11T13:15:32+00:00"
         }
     ],
     "packages-dev": [

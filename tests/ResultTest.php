@@ -22,6 +22,7 @@ class ResultTest extends TestCase
         $delegatedCountryCode = 'fr';
         $countryCode = 'fr';
         $asn = 1234;
+        $isTorExitNode = true;
 
         $result = new Result(
             $value,
@@ -33,7 +34,8 @@ class ResultTest extends TestCase
             $confidence,
             $delegatedCountryCode,
             $countryCode,
-            $asn
+            $asn,
+            $isTorExitNode
         );
 
         $this->assertSame($value, $result->getValue());
@@ -46,6 +48,7 @@ class ResultTest extends TestCase
         $this->assertSame($delegatedCountryCode, $result->getDelegatedCountryCode());
         $this->assertSame($countryCode, $result->getCountryCode());
         $this->assertSame($asn, $result->getAsn());
+        $this->assertSame($isTorExitNode, $result->isTorExitNode());
     }
 
     /**
@@ -87,6 +90,7 @@ class ResultTest extends TestCase
         $this->assertNull($result->getDelegatedCountryCode());
         $this->assertNull($result->getCountryCode());
         $this->assertNull($result->getAsn());
+        $this->assertFalse($result->isTorExitNode());
     }
 
     public function createEmailResultDataProvider()
