@@ -134,4 +134,44 @@ class ResultTest extends TestCase
             ],
         ];
     }
+
+    /**
+     * @dataProvider ipResultIsTorExitNodeAlwaysReturnsBoolDataProvider
+     */
+    public function testIpResultIsTorExitNodeAlwaysReturnsBool(?bool $isTorExitNode, bool $expectedIsTorExitNode)
+    {
+        $result = new Result(
+            '127.0.0.1',
+            ResultInterface::TYPE_IP,
+            0,
+            true,
+            false,
+            new \DateTime(),
+            0.2,
+            'gb',
+            'gb',
+            1234,
+            $isTorExitNode
+        );
+
+        $this->assertSame($expectedIsTorExitNode, $result->isTorExitNode());
+    }
+
+    public function ipResultIsTorExitNodeAlwaysReturnsBoolDataProvider(): array
+    {
+        return [
+            'null' => [
+                'isTorExitNode' => null,
+                'expectedIsTorExitNode' => false,
+            ],
+            'false' => [
+                'isTorExitNode' => false,
+                'expectedIsTorExitNode' => false,
+            ],
+            'true' => [
+                'isTorExitNode' => true,
+                'expectedIsTorExitNode' => true,
+            ],
+        ];
+    }
 }

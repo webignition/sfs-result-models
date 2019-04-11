@@ -54,7 +54,7 @@ class Result implements ResultInterface
         $this->delegatedCountryCode = $delegatedCountryCode;
         $this->countryCode = $countryCode;
         $this->asn = $asn;
-        $this->isTorExitNode = $isTorExitNode;
+        $this->isTorExitNode = is_bool($isTorExitNode) ? $isTorExitNode : false;
     }
 
     public function getType(): string
